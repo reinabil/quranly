@@ -28,7 +28,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var goToTafsir: UIButton!
     @IBOutlet weak var play: UIButton!
     
-    var defaults = UserDefaults.standard
+    @IBOutlet weak var ayahNew: UITextView!
+    var isFinishedLoading =  false
     
     var ayahInQuranHome: Int!
     var isPlayed = false
@@ -38,10 +39,12 @@ class HomeViewController: UIViewController {
     var quranManager = QuranManager()
     var surahManager = SurahManager()
     
+    let ayahView = UIView()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        surahAyah.text = surahAyahString
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         // Do any additional setup after loading the view.
         tafsirText = """
@@ -75,6 +78,8 @@ Jar majrur (بِسْمِ) di awal ayat berkaitan dengan kata kerja yang tersembu
         date.hour = 6
         date.minute = 0
         
+        ayahNew.text = "بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ "
+        
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         
         let uuidString = UUID().uuidString
@@ -86,11 +91,40 @@ Jar majrur (بِسْمِ) di awal ayat berkaitan dengan kata kerja yang tersembu
         })
         
         quranManager.delegate = self
+        showSpinner(onView: self.view)
         quranManager.fetchAyah()
         
-        surahAyah.text = defaults.string(forKey: "surahName")
-        print("Surah name")
-        print(defaults.string(forKey: "surahName"))
+//        view.addSubview(ayahView)
+//        ayahView.addSubview(ayah)
+//        ayahView.layer.borderWidth = 1
+//        ayahView.layer.borderColor = UIColor.black.cgColor
+//
+//
+//        NSLayoutConstraint.activate([
+//            ayahView.heightAnchor.constraint(equalTo: ayah.heightAnchor, constant: 10),
+//            ayahView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+//            ayahView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+//
+//            ayah.centerXAnchor.constraint(equalTo: ayahView.centerXAnchor),
+//            ayah.centerYAnchor.constraint(equalTo: ayahView.centerYAnchor)
+//
+//        ])
+        
+        ayah.layer.borderWidth = 1
+        ayah.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
+        ayah.layer.cornerRadius = 12
+        
+        ayahNew.layer.borderWidth = 1
+        ayahNew.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
+        ayahNew.layer.cornerRadius = 12
+        ayahNew.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20);
+        
+//        ayah.topAnchor.constraint(equalTo: siborderygijo.topAnchor, constant: sekian)
+//
+//        let wrappingView = UIView(frame: UIScreen.main.bounds)
+//        wrappingView.layer.borderColor = UIColor.yellow.cgColor
+//        wrappingView.layer.borderWidth = 2.0;
+//        wrappingView.addSubview(ayah)
         
         let url = URL(string: "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6234.mp3")
         let playerItem:AVPlayerItem = AVPlayerItem(url: url!)
@@ -133,10 +167,14 @@ Jar majrur (بِسْمِ) di awal ayat berkaitan dengan kata kerja yang tersembu
         
     }
     
+
+    
     @IBAction func shareButtonPressed(_ sender: UIButton) {
        
     }
     @IBAction func randomButtonPressed(_ sender: UIButton) {
+        
+        showSpinner(onView: self.view)
         quranManager.fetchAyah()
         isPlayed = false
         player?.pause()
@@ -149,17 +187,35 @@ Jar majrur (بِسْمِ) di awal ayat berkaitan dengan kata kerja yang tersembu
     
 }
 
-extension HomeViewController: QuranManagerDelegate{
-    func didUpdateQuran(_ quranManager: QuranManager, quran: QuranModel) {
+extension HomeViewController: SurahManagerDelegate {
+    
+    func didUpdateSurah(_ surahManager: SurahManager, surah: SurahModel) {
+        
         DispatchQueue.main.async {
+            print("halloe")
+        }
+    }
+    
+}
+
+extension HomeViewController: QuranManagerDelegate{
+    
+    func didUpdateQuran(_ quranManager: QuranManager, quran: QuranModel) {
+        
+        var defaults = UserDefaults.standard
+        print("start")
+        DispatchQueue.main.async {
+            self.removeSpinner()
             self.ayah.text = quran.ayahArab
+            self.ayahNew.text = quran.ayahArab
             self.translation.text = quran.ayahTranslation
             tafsirText = quran.ayahTafsirLong
             self.ayahInQuranHome = quran.ayahInQuran
 //            self.url = URL(string: "\(quran.ayahURLAudio)")
 //            print(self.url!)
-            self.surahManager.fetchSurah(self.ayahInQuranHome)
-            print(self.ayahInQuranHome!)
+//            self.surahManager.fetchSurah(self.ayahInQuranHome)
+//            print(self.ayahInQuranHome!)
+            print("selesai")
            
         }
         
@@ -171,15 +227,28 @@ extension HomeViewController: QuranManagerDelegate{
     
 }
 
-extension HomeViewController: SurahManagerDelegate {
-    
-    func didUpdateSurah(_ surahManager: SurahManager, surah: SurahModel) {
+var vSpinner : UIView?
+
+extension UIViewController {
+    func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.6)
+        let ai = UIActivityIndicatorView.init(style: .white)
+        ai.startAnimating()
+        ai.center = spinnerView.center
         
         DispatchQueue.main.async {
-            
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
         }
+        
+        vSpinner = spinnerView
     }
     
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
+        }
+    }
 }
-
-

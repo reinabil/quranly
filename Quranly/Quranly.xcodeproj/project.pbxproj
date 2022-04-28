@@ -17,6 +17,7 @@
 		DE6731672817CFD30058D53B /* UthmanTN1_Ver07.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE6731652817CFBE0058D53B /* UthmanTN1_Ver07.otf */; };
 		DE6731692817D0940058D53B /* ScheherazadeNew-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE6731682817D0940058D53B /* ScheherazadeNew-Regular.ttf */; };
 		DE9DC2482818F6DF00475C61 /* TafsirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DC2472818F6DF00475C61 /* TafsirViewController.swift */; };
+		DEA941A0281AF14E00F64BB7 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9419F281AF14E00F64BB7 /* SpinnerViewController.swift */; };
 		DEB86964281840630042C229 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB86963281840630042C229 /* HomeViewController.swift */; };
 		DEDFEAC8281A832E00B1D2D0 /* SurahModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFEAC7281A832E00B1D2D0 /* SurahModel.swift */; };
 		DEDFEACA281A836E00B1D2D0 /* SurahData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFEAC9281A836E00B1D2D0 /* SurahData.swift */; };
@@ -39,6 +40,7 @@
 		DE6731652817CFBE0058D53B /* UthmanTN1_Ver07.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UthmanTN1_Ver07.otf; sourceTree = "<group>"; };
 		DE6731682817D0940058D53B /* ScheherazadeNew-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScheherazadeNew-Regular.ttf"; sourceTree = "<group>"; };
 		DE9DC2472818F6DF00475C61 /* TafsirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafsirViewController.swift; sourceTree = "<group>"; };
+		DEA9419F281AF14E00F64BB7 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		DEB86963281840630042C229 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DEDFEAC7281A832E00B1D2D0 /* SurahModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahModel.swift; sourceTree = "<group>"; };
 		DEDFEAC9281A836E00B1D2D0 /* SurahData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahData.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				DEDFEACB281A855D00B1D2D0 /* SurahManager.swift */,
 				DEEE613928179F8E00714755 /* QuranData.swift */,
 				DEB86963281840630042C229 /* HomeViewController.swift */,
+				DEA9419F281AF14E00F64BB7 /* SpinnerViewController.swift */,
 				DEEE6133281793AD00714755 /* QuranManager.swift */,
 				DE49231B28177F5A009B7AA7 /* Assets.xcassets */,
 				DE49231D28177F5A009B7AA7 /* LaunchScreen.storyboard */,
@@ -184,6 +187,7 @@
 				DE49231A28177F56009B7AA7 /* Quranly.xcdatamodeld in Sources */,
 				DEEE613A28179F8E00714755 /* QuranData.swift in Sources */,
 				DE49231428177F56009B7AA7 /* ViewController.swift in Sources */,
+				DEA941A0281AF14E00F64BB7 /* SpinnerViewController.swift in Sources */,
 				DEDFEACA281A836E00B1D2D0 /* SurahData.swift in Sources */,
 				DE49231028177F56009B7AA7 /* AppDelegate.swift in Sources */,
 				DE49231228177F56009B7AA7 /* SceneDelegate.swift in Sources */,

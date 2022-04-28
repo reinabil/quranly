@@ -62,9 +62,6 @@ struct SurahManager {
             print(surahName)
             print(numberOfAyah)
             
-            defaults.set(surahName, forKey: "surahName")
-            defaults.set(numberOfAyah, forKey: "numberOfAyah")
-            
             let surah = SurahModel(ayahInQuranSurah: ayahInQuran, surahName: surahName, numberOfAyah: numberOfAyah)
             return surah
         } catch {
