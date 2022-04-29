@@ -19,6 +19,11 @@
 		DE9DC2482818F6DF00475C61 /* TafsirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DC2472818F6DF00475C61 /* TafsirViewController.swift */; };
 		DEA941A0281AF14E00F64BB7 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9419F281AF14E00F64BB7 /* SpinnerViewController.swift */; };
 		DEB86964281840630042C229 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB86963281840630042C229 /* HomeViewController.swift */; };
+		DEBD3D5F281B67940020A3E4 /* quran-lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = DEBD3D5E281B67940020A3E4 /* quran-lottie.json */; };
+		DECE259C281B6E2B008C9E87 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DECE259B281B6E2B008C9E87 /* Lottie */; };
+		DECE25A1281B835A008C9E87 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECE259F281B8356008C9E87 /* AVKit.framework */; };
+		DECE25A5281B837F008C9E87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECE25A4281B837F008C9E87 /* AVFoundation.framework */; };
+		DECE25AF281B8F39008C9E87 /* read-quran.json in Resources */ = {isa = PBXBuildFile; fileRef = DECE25AE281B8F39008C9E87 /* read-quran.json */; };
 		DEDFEAC8281A832E00B1D2D0 /* SurahModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFEAC7281A832E00B1D2D0 /* SurahModel.swift */; };
 		DEDFEACA281A836E00B1D2D0 /* SurahData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFEAC9281A836E00B1D2D0 /* SurahData.swift */; };
 		DEDFEACC281A855D00B1D2D0 /* SurahManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFEACB281A855D00B1D2D0 /* SurahManager.swift */; };
@@ -42,6 +47,11 @@
 		DE9DC2472818F6DF00475C61 /* TafsirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafsirViewController.swift; sourceTree = "<group>"; };
 		DEA9419F281AF14E00F64BB7 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		DEB86963281840630042C229 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DEBD3D5E281B67940020A3E4 /* quran-lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "quran-lottie.json"; sourceTree = "<group>"; };
+		DECE2598281B6DEA008C9E87 /* lottie-ios-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "lottie-ios-master"; path = "../../../../../Downloads/lottie-ios-master"; sourceTree = "<group>"; };
+		DECE259F281B8356008C9E87 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		DECE25A4281B837F008C9E87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DECE25AE281B8F39008C9E87 /* read-quran.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "read-quran.json"; sourceTree = "<group>"; };
 		DEDFEAC7281A832E00B1D2D0 /* SurahModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahModel.swift; sourceTree = "<group>"; };
 		DEDFEAC9281A836E00B1D2D0 /* SurahData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahData.swift; sourceTree = "<group>"; };
 		DEDFEACB281A855D00B1D2D0 /* SurahManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahManager.swift; sourceTree = "<group>"; };
@@ -55,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DECE25A1281B835A008C9E87 /* AVKit.framework in Frameworks */,
+				DECE259C281B6E2B008C9E87 /* Lottie in Frameworks */,
+				DECE25A5281B837F008C9E87 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +77,10 @@
 		DE49230328177F56009B7AA7 = {
 			isa = PBXGroup;
 			children = (
+				DECE2597281B6DEA008C9E87 /* Packages */,
 				DE49230E28177F56009B7AA7 /* Quranly */,
 				DE49230D28177F56009B7AA7 /* Products */,
+				DECE259A281B6E2B008C9E87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +103,8 @@
 				DEDFEAC7281A832E00B1D2D0 /* SurahModel.swift */,
 				DEDFEAC9281A836E00B1D2D0 /* SurahData.swift */,
 				DE9DC2472818F6DF00475C61 /* TafsirViewController.swift */,
+				DEBD3D5E281B67940020A3E4 /* quran-lottie.json */,
+				DECE25AE281B8F39008C9E87 /* read-quran.json */,
 				DEDFEACB281A855D00B1D2D0 /* SurahManager.swift */,
 				DEEE613928179F8E00714755 /* QuranData.swift */,
 				DEB86963281840630042C229 /* HomeViewController.swift */,
@@ -111,6 +128,23 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		DECE2597281B6DEA008C9E87 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DECE2598281B6DEA008C9E87 /* lottie-ios-master */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		DECE259A281B6E2B008C9E87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DECE25A4281B837F008C9E87 /* AVFoundation.framework */,
+				DECE259F281B8356008C9E87 /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +161,9 @@
 			dependencies = (
 			);
 			name = Quranly;
+			packageProductDependencies = (
+				DECE259B281B6E2B008C9E87 /* Lottie */,
+			);
 			productName = Quranly;
 			productReference = DE49230C28177F56009B7AA7 /* Quranly.app */;
 			productType = "com.apple.product-type.application";
@@ -169,11 +206,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBD3D5F281B67940020A3E4 /* quran-lottie.json in Resources */,
 				DE6731692817D0940058D53B /* ScheherazadeNew-Regular.ttf in Resources */,
 				DE49231F28177F5A009B7AA7 /* LaunchScreen.storyboard in Resources */,
 				DE6731672817CFD30058D53B /* UthmanTN1_Ver07.otf in Resources */,
 				DE49231C28177F5A009B7AA7 /* Assets.xcassets in Resources */,
 				DE49231728177F56009B7AA7 /* Main.storyboard in Resources */,
+				DECE25AF281B8F39008C9E87 /* read-quran.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +385,7 @@
 				DEVELOPMENT_TEAM = YH7J3D49RU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quranly/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Qurany;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -374,6 +414,7 @@
 				DEVELOPMENT_TEAM = YH7J3D49RU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quranly/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Qurany;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -414,6 +455,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DECE259B281B6E2B008C9E87 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DE49231828177F56009B7AA7 /* Quranly.xcdatamodeld */ = {
