@@ -22,6 +22,18 @@ struct QuranManager {
         return URLString
     }
     
+    func nextAyah (surah: Int, ayah: Int) -> String {
+        let URLString = "https://quran-api-id.vercel.app/surahs/\(surah)/ayahs/\(ayah)"
+        performRequest(with: URLString)
+        return URLString
+    }
+    
+    func prevAyah (surah: Int, ayah: Int) -> String {
+        let URLString = "https://quran-api-id.vercel.app/surahs/\(surah)/ayahs/\(ayah)"
+        performRequest(with: URLString)
+        return URLString
+    }
+    
     func performRequest(with urlString: String) {
         // 1. create URL
         if let url = URL(string: urlString) {
@@ -70,3 +82,4 @@ struct QuranManager {
     }
     
 }
+

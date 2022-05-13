@@ -13,10 +13,11 @@ struct SurahData: Codable {
 
 struct data: Codable {
     let number: Int
+    let text: String
     let surah: Surah
 }
 
 struct Surah: Codable {
     let englishName: String
-    let numberOfAyahs: Int
+    let numberOfAyah: Int
 }

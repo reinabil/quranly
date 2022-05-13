@@ -8,8 +8,8 @@
 import Foundation
 
 struct SurahModel {
-    let ayahInQuranSurah: Int
-    let surahName: String
+    let number: Int
+    let text: String
     let numberOfAyah: Int
 }
 

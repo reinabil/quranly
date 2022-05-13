@@ -55,14 +55,14 @@ struct SurahManager {
         do {
             let decodedData = try decoder.decode(SurahData.self, from: surahData)
             
-            let ayahInQuran = decodedData.data.number
-            let surahName = decodedData.data.surah.englishName
-            let numberOfAyah = decodedData.data.surah.numberOfAyahs
+            let number = decodedData.data.number
+            let surahName = decodedData.data.text
+            let numberOfAyah = decodedData.data.surah.numberOfAyah
        
             print(surahName)
             print(numberOfAyah)
             
-            let surah = SurahModel(ayahInQuranSurah: ayahInQuran, surahName: surahName, numberOfAyah: numberOfAyah)
+            let surah = SurahModel(number: number, text: surahName, numberOfAyah: numberOfAyah)
             return surah
         } catch {
             self.delegate?.didFailWithError(error: error)
