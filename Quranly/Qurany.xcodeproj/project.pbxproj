@@ -12,16 +12,17 @@
 		DE49231228177F56009B7AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49231128177F56009B7AA7 /* SceneDelegate.swift */; };
 		DE49231428177F56009B7AA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49231328177F56009B7AA7 /* ViewController.swift */; };
 		DE49231728177F56009B7AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE49231528177F56009B7AA7 /* Main.storyboard */; };
-		DE49231A28177F56009B7AA7 /* Quranly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE49231828177F56009B7AA7 /* Quranly.xcdatamodeld */; };
 		DE49231C28177F5A009B7AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE49231B28177F5A009B7AA7 /* Assets.xcassets */; };
 		DE49231F28177F5A009B7AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE49231D28177F5A009B7AA7 /* LaunchScreen.storyboard */; };
-		DE6731672817CFD30058D53B /* UthmanTN1_Ver07.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE6731652817CFBE0058D53B /* UthmanTN1_Ver07.otf */; };
+		DE65B64F283018AE00E5A9EC /* me_quran Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE65B64E283018A900E5A9EC /* me_quran Regular.ttf */; };
 		DE6731692817D0940058D53B /* ScheherazadeNew-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE6731682817D0940058D53B /* ScheherazadeNew-Regular.ttf */; };
-		DE987D64282DEF0F000F0673 /* Toaster in Frameworks */ = {isa = PBXBuildFile; productRef = DE987D63282DEF0F000F0673 /* Toaster */; };
 		DE9DC2482818F6DF00475C61 /* TafsirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DC2472818F6DF00475C61 /* TafsirViewController.swift */; };
 		DEA941A0281AF14E00F64BB7 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9419F281AF14E00F64BB7 /* SpinnerViewController.swift */; };
 		DEAB964F282B3B4400B690F8 /* SurahDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB964E282B3B4400B690F8 /* SurahDetailTableViewCell.swift */; };
 		DEB86964281840630042C229 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB86963281840630042C229 /* HomeViewController.swift */; };
+		DEB9817D282EA8E100892972 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEB9817C282EA8E100892972 /* IQKeyboardManagerSwift */; };
+		DEB98180282EA8EC00892972 /* Toaster in Frameworks */ = {isa = PBXBuildFile; productRef = DEB9817F282EA8EC00892972 /* Toaster */; };
+		DEB98183282EA90C00892972 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DEB98182282EA90C00892972 /* SwiftyJSON */; };
 		DECE25A1281B835A008C9E87 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECE259F281B8356008C9E87 /* AVKit.framework */; };
 		DECE25A5281B837F008C9E87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECE25A4281B837F008C9E87 /* AVFoundation.framework */; };
 		DEDFEAC8281A832E00B1D2D0 /* SurahModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFEAC7281A832E00B1D2D0 /* SurahModel.swift */; };
@@ -30,27 +31,24 @@
 		DEEE61322817914B00714755 /* QuranModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE61312817914B00714755 /* QuranModel.swift */; };
 		DEEE6134281793AD00714755 /* QuranManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE6133281793AD00714755 /* QuranManager.swift */; };
 		DEEE613A28179F8E00714755 /* QuranData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE613928179F8E00714755 /* QuranData.swift */; };
-		DEF99B8428294A3900982F4A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DEF99B8328294A3900982F4A /* SwiftyJSON */; };
 		DEF99B8628294A4900982F4A /* Surah-JSON in Resources */ = {isa = PBXBuildFile; fileRef = DEF99B8528294A4900982F4A /* Surah-JSON */; };
 		DEF99B8E28295DCA00982F4A /* QuranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF99B8D28295DCA00982F4A /* QuranViewController.swift */; };
 		DEF99B902829644A00982F4A /* SurahTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF99B8F2829644A00982F4A /* SurahTableViewCell.swift */; };
-		DEF99B9328296CDC00982F4A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEF99B9228296CDC00982F4A /* IQKeyboardManagerSwift */; };
 		DEF99B952829794400982F4A /* SurahQuranData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF99B942829794400982F4A /* SurahQuranData.swift */; };
 		DEFCF120282A04770071DF52 /* SurahDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFCF11F282A04770071DF52 /* SurahDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE110D0328203EE80097D17F /* surahArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surahArray.swift; sourceTree = "<group>"; };
-		DE49230C28177F56009B7AA7 /* Quranly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quranly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE49230C28177F56009B7AA7 /* Qurany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qurany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE49230F28177F56009B7AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE49231128177F56009B7AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE49231328177F56009B7AA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE49231628177F56009B7AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DE49231928177F56009B7AA7 /* Quranly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quranly.xcdatamodel; sourceTree = "<group>"; };
 		DE49231B28177F5A009B7AA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE49231E28177F5A009B7AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE49232028177F5A009B7AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE6731652817CFBE0058D53B /* UthmanTN1_Ver07.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UthmanTN1_Ver07.otf; sourceTree = "<group>"; };
+		DE65B64E283018A900E5A9EC /* me_quran Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "me_quran Regular.ttf"; sourceTree = "<group>"; };
 		DE6731682817D0940058D53B /* ScheherazadeNew-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScheherazadeNew-Regular.ttf"; sourceTree = "<group>"; };
 		DE9DC2472818F6DF00475C61 /* TafsirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafsirViewController.swift; sourceTree = "<group>"; };
 		DEA9419F281AF14E00F64BB7 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
@@ -76,11 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE987D64282DEF0F000F0673 /* Toaster in Frameworks */,
 				DECE25A1281B835A008C9E87 /* AVKit.framework in Frameworks */,
-				DEF99B9328296CDC00982F4A /* IQKeyboardManagerSwift in Frameworks */,
-				DEF99B8428294A3900982F4A /* SwiftyJSON in Frameworks */,
+				DEB98180282EA8EC00892972 /* Toaster in Frameworks */,
 				DECE25A5281B837F008C9E87 /* AVFoundation.framework in Frameworks */,
+				DEB98183282EA90C00892972 /* SwiftyJSON in Frameworks */,
+				DEB9817D282EA8E100892972 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +98,7 @@
 		DE49230D28177F56009B7AA7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE49230C28177F56009B7AA7 /* Quranly.app */,
+				DE49230C28177F56009B7AA7 /* Qurany.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +115,6 @@
 				DE49231B28177F5A009B7AA7 /* Assets.xcassets */,
 				DE49231D28177F5A009B7AA7 /* LaunchScreen.storyboard */,
 				DE49232028177F5A009B7AA7 /* Info.plist */,
-				DE49231828177F56009B7AA7 /* Quranly.xcdatamodeld */,
 				DE6731662817CFC40058D53B /* fonts */,
 			);
 			path = Quranly;
@@ -126,7 +123,7 @@
 		DE6731662817CFC40058D53B /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				DE6731652817CFBE0058D53B /* UthmanTN1_Ver07.otf */,
+				DE65B64E283018A900E5A9EC /* me_quran Regular.ttf */,
 				DE6731682817D0940058D53B /* ScheherazadeNew-Regular.ttf */,
 			);
 			path = fonts;
@@ -181,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE49230B28177F56009B7AA7 /* Quranly */ = {
+		DE49230B28177F56009B7AA7 /* Qurany */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE49232328177F5A009B7AA7 /* Build configuration list for PBXNativeTarget "Quranly" */;
+			buildConfigurationList = DE49232328177F5A009B7AA7 /* Build configuration list for PBXNativeTarget "Qurany" */;
 			buildPhases = (
 				DE49230828177F56009B7AA7 /* Sources */,
 				DE49230928177F56009B7AA7 /* Frameworks */,
@@ -193,14 +190,14 @@
 			);
 			dependencies = (
 			);
-			name = Quranly;
+			name = Qurany;
 			packageProductDependencies = (
-				DEF99B8328294A3900982F4A /* SwiftyJSON */,
-				DEF99B9228296CDC00982F4A /* IQKeyboardManagerSwift */,
-				DE987D63282DEF0F000F0673 /* Toaster */,
+				DEB9817C282EA8E100892972 /* IQKeyboardManagerSwift */,
+				DEB9817F282EA8EC00892972 /* Toaster */,
+				DEB98182282EA90C00892972 /* SwiftyJSON */,
 			);
 			productName = Quranly;
-			productReference = DE49230C28177F56009B7AA7 /* Quranly.app */;
+			productReference = DE49230C28177F56009B7AA7 /* Qurany.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DE49230728177F56009B7AA7 /* Build configuration list for PBXProject "Quranly" */;
+			buildConfigurationList = DE49230728177F56009B7AA7 /* Build configuration list for PBXProject "Qurany" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,15 +225,15 @@
 			);
 			mainGroup = DE49230328177F56009B7AA7;
 			packageReferences = (
-				DEF99B8228294A3900982F4A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				DEF99B9128296CDC00982F4A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				DE987D62282DEF0F000F0673 /* XCRemoteSwiftPackageReference "Toaster" */,
+				DEB9817B282EA8E100892972 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				DEB9817E282EA8EC00892972 /* XCRemoteSwiftPackageReference "Toaster" */,
+				DEB98181282EA90C00892972 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = DE49230D28177F56009B7AA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE49230B28177F56009B7AA7 /* Quranly */,
+				DE49230B28177F56009B7AA7 /* Qurany */,
 			);
 		};
 /* End PBXProject section */
@@ -249,7 +246,7 @@
 				DEF99B8628294A4900982F4A /* Surah-JSON in Resources */,
 				DE6731692817D0940058D53B /* ScheherazadeNew-Regular.ttf in Resources */,
 				DE49231F28177F5A009B7AA7 /* LaunchScreen.storyboard in Resources */,
-				DE6731672817CFD30058D53B /* UthmanTN1_Ver07.otf in Resources */,
+				DE65B64F283018AE00E5A9EC /* me_quran Regular.ttf in Resources */,
 				DE49231C28177F5A009B7AA7 /* Assets.xcassets in Resources */,
 				DE49231728177F56009B7AA7 /* Main.storyboard in Resources */,
 			);
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE49231A28177F56009B7AA7 /* Quranly.xcdatamodeld in Sources */,
 				DEEE613A28179F8E00714755 /* QuranData.swift in Sources */,
 				DEAB964F282B3B4400B690F8 /* SurahDetailTableViewCell.swift in Sources */,
 				DE49231428177F56009B7AA7 /* ViewController.swift in Sources */,
@@ -440,8 +436,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nabilrei.Qurany;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.nabilrei.Qurany;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -469,8 +465,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nabilrei.Qurany;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.nabilrei.Qurany;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -481,7 +477,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE49230728177F56009B7AA7 /* Build configuration list for PBXProject "Quranly" */ = {
+		DE49230728177F56009B7AA7 /* Build configuration list for PBXProject "Qurany" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE49232128177F5A009B7AA7 /* Debug */,
@@ -490,7 +486,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE49232328177F5A009B7AA7 /* Build configuration list for PBXNativeTarget "Quranly" */ = {
+		DE49232328177F5A009B7AA7 /* Build configuration list for PBXNativeTarget "Qurany" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE49232428177F5A009B7AA7 /* Debug */,
@@ -502,23 +498,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DE987D62282DEF0F000F0673 /* XCRemoteSwiftPackageReference "Toaster" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devxoul/Toaster.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		DEF99B8228294A3900982F4A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		DEF99B9128296CDC00982F4A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		DEB9817B282EA8E100892972 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -526,38 +506,41 @@
 				kind = branch;
 			};
 		};
+		DEB9817E282EA8EC00892972 /* XCRemoteSwiftPackageReference "Toaster" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Toaster.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DEB98181282EA90C00892972 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DE987D63282DEF0F000F0673 /* Toaster */ = {
+		DEB9817C282EA8E100892972 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DE987D62282DEF0F000F0673 /* XCRemoteSwiftPackageReference "Toaster" */;
-			productName = Toaster;
-		};
-		DEF99B8328294A3900982F4A /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEF99B8228294A3900982F4A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
-		DEF99B9228296CDC00982F4A /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEF99B9128296CDC00982F4A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = DEB9817B282EA8E100892972 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		DE49231828177F56009B7AA7 /* Quranly.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DE49231928177F56009B7AA7 /* Quranly.xcdatamodel */,
-			);
-			currentVersion = DE49231928177F56009B7AA7 /* Quranly.xcdatamodel */;
-			path = Quranly.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+		DEB9817F282EA8EC00892972 /* Toaster */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEB9817E282EA8EC00892972 /* XCRemoteSwiftPackageReference "Toaster" */;
+			productName = Toaster;
 		};
-/* End XCVersionGroup section */
+		DEB98182282EA90C00892972 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEB98181282EA90C00892972 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE49230428177F56009B7AA7 /* Project object */;
 }

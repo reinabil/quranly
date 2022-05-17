@@ -107,7 +107,15 @@ Jar majrur (بِسْمِ) di awal ayat berkaitan dengan kata kerja yang tersembu
         date.hour = 7
         date.minute = 0
         
-        ayahNew.text = "بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ "
+        func getRangeOfSubString(subString: String, fromString: String) -> NSRange {
+            let sampleLinkRange = fromString.range(of: subString)!
+            let startPos = fromString.distance(from: fromString.startIndex, to: sampleLinkRange.lowerBound)
+            let endPos = fromString.distance(from: fromString.startIndex, to: sampleLinkRange.upperBound)
+            let linkRange = NSMakeRange(startPos, endPos - startPos)
+            return linkRange
+        }
+        
+            
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         
@@ -315,6 +323,16 @@ extension HomeViewController: SurahManagerDelegate {
 
 extension HomeViewController: QuranManagerDelegate{
     
+    func getNumerals(num: Int) -> String {
+        
+            let number = NSNumber(value: num)
+            let format = NumberFormatter()
+            format.locale = Locale(identifier: "ar") // You can set locale of your language
+            let formatedNumber = format.string(from: number)
+            return formatedNumber!
+        
+        }
+    
     func didUpdateQuran(_ quranManager: QuranManager, quran: QuranModel) {
         
         var defaults = UserDefaults.standard
@@ -322,7 +340,7 @@ extension HomeViewController: QuranManagerDelegate{
         DispatchQueue.main.async {
             
             self.ayah.text = quran.ayahArab
-            self.ayahNew.text = quran.ayahArab
+            self.ayahNew.text = "\(quran.ayahArab)"
             self.translation.text = quran.ayahTranslation
             tafsirText = quran.ayahTafsirLong
             surahArabGlobal = quran.ayahArab

@@ -240,7 +240,21 @@ let surahNumber = [
     "An-Nas" : 114,
 ]
 
-class QuranViewController: UIViewController {
+class QuranViewController: UIViewController, UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        if text != "" {
+            let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", text)
+            let array = (surahArray as NSArray).filtered(using: searchPredicate)
+            searchedSurah = array as! [String]
+        } else {
+            searchedSurah = surahArray
+        }
+        
+        isSearching = true
+        surahTableView.reloadData()
+    }
+    
 
 
     @IBOutlet weak var surahTableView: UITableView!
@@ -255,15 +269,22 @@ class QuranViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let directionalMargins = NSDirectionalEdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 18)
-        searchBar.directionalLayoutMargins = directionalMargins
+//        searchBar.sizeToFit()
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Cari surah"
+        navigationItem.searchController = search
+        
+//        let directionalMargins = NSDirectionalEdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 18)
+//        searchBar.directionalLayoutMargins = directionalMargins
         
 //        navigationItem.titleView = searchBar
         
         surahTableView.delegate = self
         surahTableView.dataSource = self
         
-        searchBar.delegate = self
+//        searchBar.delegate = self
         
         navigationController?.navigationBar.prefersLargeTitles = true
     }

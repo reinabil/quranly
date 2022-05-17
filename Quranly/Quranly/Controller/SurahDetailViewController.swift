@@ -21,6 +21,7 @@ class SurahDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
         
         ayahTableView.delegate = self
         ayahTableView.dataSource = self
@@ -33,12 +34,17 @@ class SurahDetailViewController: UIViewController {
         print("surah ayah")
         print(getSurahAyah(numberOfSurah: "\(numberOfSurah!)", ayah: "1"))
         
-        
-        
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func infoPressed(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "Help", message:
+                "· Sentuh ayat untuk memutar audio\n\n· Tekan dan tahan ayat untuk membagikan ayat & melihat tafsir\n\n· Pastikan kamu terhubung dengan internet agar dapat mendengar audio ayat", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Close", style: .default))
 
+            self.present(alertController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -48,6 +54,19 @@ class SurahDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    var ayahIndexPath = 1
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+        if segue.identifier == "tafsirAyah" {
+            let detailVC = segue.destination as? TafsirViewController
+            // since we already subscribe the delegate from second page, we need to connect it to here
+            
+            detailVC?.tafsir = getTafsirAyah(numberOfSurah: "\(numberOfSurah!)", ayah: "\(ayahIndexPath)")
+            print(surahAyahTitle)
+            detailVC?.surahAyah = "\(getSurahTitle(numberOfSurah: "\(numberOfSurah!)")) : \(ayahIndexPath)" ?? "-"
+    }
+    }
 
 }
 
@@ -241,10 +260,35 @@ extension UIViewController {
         else { return 1 }
     }
     
+    func getTafsirAyah(numberOfSurah: String, ayah: String) -> String {
+        if let path = Bundle.main.path(forResource: "Surah-JSON/\(numberOfSurah)", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let jsonObj = try JSON(data: data)
+                return "\(jsonObj["\(numberOfSurah)"]["tafsir"]["id"]["kemenag"]["text"][ayah])"
+            } catch let error {
+                return "parse error: \(error.localizedDescription)"
+            }
+        } else {
+            return "Invalid filename/path."
+        }
+    }
+    
 }
 
 //MARK: - TABLE VIEW FOR SURAH
 extension SurahDetailViewController: UITableViewDelegate, UITableViewDataSource  {
+    
+    func getNumerals(num: Int) -> String {
+        
+            let number = NSNumber(value: num)
+            let format = NumberFormatter()
+            format.locale = Locale(identifier: "ar") // You can set locale of your language
+            let formatedNumber = format.string(from: number)
+            return formatedNumber!
+        
+        }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Int(getSurahNumberOfAyah(numberOfSurah: "\(self.numberOfSurah!)")) ?? 1
     }
@@ -252,8 +296,10 @@ extension SurahDetailViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "ayahCell", for: indexPath) as! SurahDetailTableViewCell
-
-        cell.ayahLabel?.text = self.getSurahAyah(numberOfSurah: "\(self.numberOfSurah!)", ayah: "\(indexPath.row + 1)")
+        
+        let ayahArab = getNumerals(num: indexPath.row + 1)
+        
+        cell.ayahLabel?.text = "\(self.getSurahAyah(numberOfSurah: "\(self.numberOfSurah!)", ayah: "\(indexPath.row + 1)"))"
         cell.translateLabel?.text = "\(indexPath.row + 1). \(self.getAyahTranslation(numberOfSurah: "\(self.numberOfSurah!)", ayah: "\(indexPath.row + 1)"))"
 
         cell.selectionStyle = .none
@@ -281,4 +327,68 @@ extension SurahDetailViewController: UITableViewDelegate, UITableViewDataSource 
         print(seconds)
 
     }
+    
+    func tableView(_ tableView: UITableView,
+      contextMenuConfigurationForRowAt indexPath: IndexPath,
+      point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        ayahIndexPath = indexPath.row + 1
+
+        let share = UIAction(title: "Share ayat", image: UIImage(systemName: "square.and.arrow.up")) { _ in
+                print("shared button")
+                //Set the default sharing message.
+            let message = """
+\(self.getSurahTitle(numberOfSurah: "\(self.numberOfSurah!)")) : \(self.getSurahNumberOfAyah(numberOfSurah: "\(self.numberOfSurah!)"))\n\n\(self.getSurahAyah(numberOfSurah: "\(self.numberOfSurah!)", ayah: "\(indexPath.row + 1)"))\n\n\(self.getAyahTranslation(numberOfSurah: "\(self.numberOfSurah!)", ayah: "\(indexPath.row + 1)"))\n\nYuk awali hari dengan membaca Al-Quran di Qurany App 😊
+"""
+                       //Set the link to share.
+                       if let link = NSURL(string: "")
+                       {
+                           let objectsToShare = [message,link] as [Any]
+                           let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                           activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+                           self.present(activityVC, animated: true, completion: nil)
+                       }
+            
+        }
+        
+        let tafsir = UIAction(title: "Tafsir", image: UIImage(systemName: "text.book.closed.fill")) {
+            _ in
+            self.performSegue(withIdentifier: "tafsirAyah", sender: self)
+            
+        }
+
+      return UIContextMenuConfiguration(identifier: nil,
+        previewProvider: nil) { _ in
+        UIMenu(children: [share, tafsir])
+      }
+    }
 }
+
+
+//MARK: - STRING EXTENSION
+extension String {
+    private static let formatter = NumberFormatter()
+
+    func clippingCharacters(in characterSet: CharacterSet) -> String {
+        components(separatedBy: characterSet).joined()
+    }
+
+    func convertedDigitsToLocale(_ locale: Locale = .current) -> String {
+        let digits = Set(clippingCharacters(in: CharacterSet.decimalDigits.inverted))
+        guard !digits.isEmpty else { return self }
+
+        Self.formatter.locale = locale
+
+        let maps: [(original: String, converted: String)] = digits.map {
+            let original = String($0)
+            let digit = Self.formatter.number(from: original)!
+            let localized = Self.formatter.string(from: digit)!
+            return (original, localized)
+        }
+
+        return maps.reduce(self) { converted, map in
+            converted.replacingOccurrences(of: map.original, with: map.converted)
+        }
+    }
+}
+

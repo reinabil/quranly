@@ -19,7 +19,7 @@
         <!--Qurany-->
         <scene sceneID="jwm-23-ln3">
             <objects>
-                <viewController id="44N-mu-Ata" customClass="HomeViewController" customModule="Quranly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="44N-mu-Ata" customClass="HomeViewController" customModule="Qurany" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qhA-3i-vNv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,7 +201,7 @@
         <!--Al-Quran-->
         <scene sceneID="Yh4-mh-FwG">
             <objects>
-                <viewController title="Al-Quran" id="1PK-lF-wDK" customClass="QuranViewController" customModule="Quranly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Al-Quran" id="1PK-lF-wDK" customClass="QuranViewController" customModule="Qurany" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lIa-y7-Fh4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,38 +209,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eef-Jj-6vg">
                                 <rect key="frame" x="0.0" y="88" width="390" height="673"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Cari surah" id="vM4-QB-qyX">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="51"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <scopeButtonTitles>
-                                        <string>Title</string>
-                                        <string>Title</string>
-                                    </scopeButtonTitles>
-                                </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="surahCell" id="1wy-39-MMc" customClass="SurahTableViewCell" customModule="Quranly" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="100" width="350" height="53.333332061767578"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="surahCell" id="1wy-39-MMc" customClass="SurahTableViewCell" customModule="Qurany" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49" width="350" height="61.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1wy-39-MMc" id="9ih-jm-OZS">
-                                            <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="53.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="61.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q9M-LP-aFn">
-                                                    <rect key="frame" x="16" y="8" width="289.33333333333331" height="37.333333333333336"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q9M-LP-aFn">
+                                                    <rect key="frame" x="16" y="10" width="289.33333333333331" height="41.333333333333336"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCV-oh-TvI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="244" height="37.333333333333336"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCV-oh-TvI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="140.66666666666666" height="41.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoL-I1-uil">
-                                                            <rect key="frame" x="252.00000000000003" y="0.0" width="37.333333333333343" height="37.333333333333336"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoL-I1-uil">
+                                                            <rect key="frame" x="148.66666666666669" y="0.0" width="140.66666666666669" height="41.333333333333336"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="44.333333333333343" id="7ob-Zx-TSx"/>
+                                                            </constraints>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Label">
                                                                     <attributes>
-                                                                        <color key="NSColor" name="AccentColor"/>
-                                                                        <font key="NSFont" size="18" name="ScheherazadeNew-Regular"/>
+                                                                        <color key="NSColor" red="0.31372550129999999" green="0.60000002379999995" blue="0.38431376220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="20" name="ScheherazadeNew-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
@@ -251,9 +246,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Q9M-LP-aFn" secondAttribute="trailing" constant="16" id="6Vn-Su-N1b"/>
-                                                <constraint firstAttribute="bottom" secondItem="Q9M-LP-aFn" secondAttribute="bottom" constant="8" id="FNB-pB-X42"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q9M-LP-aFn" secondAttribute="bottom" constant="10" id="FNB-pB-X42"/>
                                                 <constraint firstItem="Q9M-LP-aFn" firstAttribute="leading" secondItem="9ih-jm-OZS" secondAttribute="leading" constant="16" id="fA2-bU-3zx"/>
-                                                <constraint firstItem="Q9M-LP-aFn" firstAttribute="top" secondItem="9ih-jm-OZS" secondAttribute="top" constant="8" id="ly0-Si-2fq"/>
+                                                <constraint firstItem="Q9M-LP-aFn" firstAttribute="top" secondItem="9ih-jm-OZS" secondAttribute="top" constant="10" id="ly0-Si-2fq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -276,7 +271,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Al-Quran" id="NeC-9m-Fa4"/>
                     <connections>
-                        <outlet property="searchBar" destination="vM4-QB-qyX" id="Yei-9b-Bdc"/>
                         <outlet property="surahTableView" destination="Eef-Jj-6vg" id="4F6-JT-OLX"/>
                         <segue destination="rVl-Sg-DeA" kind="show" identifier="surah" id="pN6-Jr-jBO"/>
                     </connections>
@@ -288,7 +282,7 @@
         <!--Surah-->
         <scene sceneID="xZ3-hV-Qzl">
             <objects>
-                <viewController id="rVl-Sg-DeA" customClass="SurahDetailViewController" customModule="Quranly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rVl-Sg-DeA" customClass="SurahDetailViewController" customModule="Qurany" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kg5-ff-xgp">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,17 +295,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="107"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRR-Hp-mFh">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRR-Hp-mFh">
                                             <rect key="frame" x="32" y="32" width="326" height="43"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ ">
-                                                    <attributes>
-                                                        <color key="NSColor" systemColor="labelColor"/>
-                                                        <font key="NSFont" size="24" name="ScheherazadeNew-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                            <fontDescription key="fontDescription" name="ScheherazadeNew-Regular" family="Scheherazade New" pointSize="24"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -323,30 +309,23 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ayahCell" id="msB-5l-XpK" customClass="SurahDetailTableViewCell" customModule="Quranly" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="156" width="350" height="105"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ayahCell" id="msB-5l-XpK" customClass="SurahDetailTableViewCell" customModule="Qurany" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="156" width="350" height="109.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="msB-5l-XpK" id="OOd-p9-JnD">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="109.33333587646484"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-9g-hUt">
-                                                    <rect key="frame" x="16" y="16" width="318" height="73"/>
+                                                    <rect key="frame" x="16" y="16" width="318" height="77.333333333333329"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8j-p0-Pxz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="49"/>
-                                                            <attributedString key="attributedText">
-                                                                <fragment content="Label">
-                                                                    <attributes>
-                                                                        <font key="NSFont" size="24" name="ScheherazadeNew-Regular"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8j-p0-Pxz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="53.333333333333336"/>
+                                                            <fontDescription key="fontDescription" name="ScheherazadeNew-Regular" family="Scheherazade New" pointSize="26"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKM-dQ-Y13">
-                                                            <rect key="frame" x="0.0" y="57" width="318" height="16"/>
+                                                            <rect key="frame" x="0.0" y="61.333333333333329" width="318" height="16"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Label">
                                                                     <attributes>
@@ -359,7 +338,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-My-03m">
-                                                            <rect key="frame" x="0.0" y="73" width="318" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="77.333333333333329" width="318" height="0.0"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
                                                                 <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
@@ -400,9 +379,16 @@
                             <constraint firstItem="Iel-rw-Bfn" firstAttribute="trailing" secondItem="oL6-FP-7B1" secondAttribute="trailing" id="oKn-cI-pQf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Surah" largeTitleDisplayMode="never" id="5d6-Z8-mly"/>
+                    <navigationItem key="navigationItem" title="Surah" largeTitleDisplayMode="never" id="5d6-Z8-mly">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="questionmark.circle" catalog="system" id="P8o-P4-QbX">
+                            <connections>
+                                <action selector="infoPressed:" destination="rVl-Sg-DeA" id="1Ud-OQ-Nno"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ayahTableView" destination="Iel-rw-Bfn" id="YJO-Eo-28N"/>
+                        <segue destination="3wp-Jm-3fr" kind="presentation" identifier="tafsirAyah" id="T7W-0t-PdZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdD-9D-7zJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -412,7 +398,7 @@
         <!--Tafsir-->
         <scene sceneID="pE0-Zy-5Dh">
             <objects>
-                <viewController title="Tafsir" id="3wp-Jm-3fr" customClass="TafsirViewController" customModule="Quranly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Tafsir" id="3wp-Jm-3fr" customClass="TafsirViewController" customModule="Qurany" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Xn-gh-Ja6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -515,7 +501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSo-8a-qU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2676.9230769230767" y="-630.56872037914684"/>
+            <point key="canvasLocation" x="3017" y="-626"/>
         </scene>
         <!--Home-->
         <scene sceneID="OXH-nL-4zh">
@@ -591,16 +577,20 @@
             <point key="canvasLocation" x="1012" y="94"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oam-Lu-NPK"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="backward.fill" catalog="system" width="32" height="32"/>
-        <image name="book.closed.fill" catalog="system" width="32" height="32"/>
-        <image name="chevron.down" catalog="system" width="32" height="32"/>
-        <image name="forward.fill" catalog="system" width="32" height="32"/>
-        <image name="house.fill" catalog="system" width="32" height="32"/>
-        <image name="play.fill" catalog="system" width="32" height="32"/>
-        <image name="shuffle" catalog="system" width="32" height="32"/>
-        <image name="speaker.slash.fill" catalog="system" width="32" height="32"/>
-        <image name="text.book.closed.fill" catalog="system" width="32" height="32"/>
+        <image name="backward.fill" catalog="system" width="128" height="79"/>
+        <image name="book.closed.fill" catalog="system" width="115" height="128"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="forward.fill" catalog="system" width="128" height="79"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
+        <image name="shuffle" catalog="system" width="128" height="95"/>
+        <image name="speaker.slash.fill" catalog="system" width="124" height="128"/>
+        <image name="text.book.closed.fill" catalog="system" width="115" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.17599999904632568" green="0.60799998044967651" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
